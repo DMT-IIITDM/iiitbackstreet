@@ -1,0 +1,119 @@
+
+@import url('https://fonts.googleapis.com/css?family=Raleway:200');
+ 
+body{
+	background-color: #0C6291;
+	font-family:Open Sans,sans-serif;
+}
+
+/*
+maroon #7E1946;
+blue #0C6291
+-------------
+blue #0B4F6C
+jungle green #1F271B
+
+
+*/
+
+idea{
+
+	font-size: 1.2em;
+}
+time{
+
+	color: #f0664f;
+	
+}
+today{
+	
+	color: #ddd;
+	font-size: 1em;
+
+}
+
+textarea,input{
+	background: #f5f5f5;
+	padding:0.5em;
+	border:none;
+	color: #0C6291;
+
+}
+
+author{
+	color: #FDE74C;
+	text-decoration: none;
+
+}
+
+.sharababy{
+	color: #fff;
+}
+
+.upvote,.upvote:active{
+		padding: 0.5em;
+		font-size:0.9em; 
+		border:1px solid #ddd;
+		color: #11aa12;
+		text-decoration: none;
+		font-family: Helvetica;
+	}
+.upvote:hover{
+	background-color: #ddd;
+	color: #000;
+}
+@media screen and (max-width: 768px){
+
+	h1{
+		font-family: 'Raleway', sans-serif;
+		font-size: 2.6em;
+	}
+	h2{
+	font-size: 1em;
+	}
+
+	textarea{
+
+		width: 100%;
+	}	
+
+	box{
+		width:90%;
+		display: inline-block;
+		margin:0.5em;
+		padding:1em;
+		background-color: #3E4E50;
+		color: #fff;
+	}
+	
+	
+}
+
+@media screen and (min-width: 768px){
+
+	input,h2,textarea,button{
+
+		margin:1em;
+		font-size: 0.9em; 
+
+	}
+	
+	h1{
+		margin-left:0.4em;
+		color: #FCFCFC;
+		font-size: 2.6em;
+font-family: 'Raleway', sans-serif;	}
+	h2{
+		color: #FCFCFC;
+	}
+	box{
+		width:80%;
+		display: inline-block;
+		margin:1em;
+		padding:1em;
+		background-color: #3E4E50;
+		color: #fff;
+	}
+
+
+}

@@ -1,0 +1,62 @@
+<html>
+  
+	<head>
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+
+		<title>Project Kandigai</title>
+		<link rel="stylesheet" type="text/css" href="resources/sam_sheet.css">
+	</head>	
+
+	<body>
+
+		<h1>Project Kandigai</h1>
+		<h2>Common Student Think Tank for IIITDM<h2>
+		<today>{{.Today}}</today>
+		<hr>
+		
+		<form  onsubmit="return validate();" action="/submit"  method="post">
+		<textarea id="idea" name="idea" rows="10" cols="70" placeholder="Your Idea Here(Max 500 chars)"></textarea>
+		<br>
+		<input id="rollnumber" type="text" placeholder="Roll Number" name="author">
+		<br>
+		<button formaction="/submit" type="submit" formmethod="post">Submit</button>
+		</form>
+		
+
+		
+		{{range .IdeaObj}}{{$link:= .ID.Hex}}
+			<box>
+			<idea>{{.Body}}</idea><br><br>	
+			-- by <author>{{.Author}}</author> on <time>{{.TimeAdded}}</time>
+			<br><br>
+			<a class="Upvote" href={{"/upvote/"}}{{$link}}>Upvote</a> {{.Upvotes}} upvotes
+			</box><br>
+		{{end}}
+		
+<hr>
+
+<footer>This portal is created with &hearts; by <a class="sharababy" href="/the-creator">Sharababy</a></footer>
+
+		<script type="text/javascript">
+			function validate() {
+ 				// check if input is bigger than 3
+ 			var value = document.getElementById('idea').value;
+ 			var value1 = document.getElementById('rollnumber').value;
+ 			if (value.length > 500) {
+ 				window.alert("Your Idea is too Long\n\n Nobody has the time to read it all \n\n Try a shorter idea");
+   			return false; // keep form from submitting
+ 				}
+ 			if (value.length == 0 || value1.length==0) {
+ 				window.alert("Whats there to submit here ?");
+   			return false; // keep form from submitting
+ 				}
+
+ 			// else form is good let it submit, of course you will 
+ 			// probably want to alert the user WHAT went wrong.
+ 		
+ 			return true;
+ 				
+			}
+		</script>
+	</body>
+</html>
